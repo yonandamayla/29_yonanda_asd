@@ -15,5 +15,10 @@ public class BukuMain29 {
         Buku29 bk2 = new Buku29("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku29 bkYonan = new Buku29("Cara manajemen waktu yang baik", "Yonanda", 200, 40, 50000);
+        bkYonan.terjual(10);
+        bkYonan.gantiHarga(80000);
+        bkYonan.tampilInformasi();
     }
 }
