@@ -38,5 +38,21 @@ public class Buku29 {
         this.stok = stok;
         harga = har;
     }
-    
+    int hitungHargaTotal(int jmlTerjual){
+        return harga * jmlTerjual;
+    }
+
+    int hitungDiskon(int hargaTotal){
+        if (hargaTotal > 150000){
+            return hargaTotal * 12 /100;
+        } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+            return hargaTotal * 5 / 100;
+        } else {
+            return 0;
+        }
+    }
+
+    int hitungHargaBayar(int hargaTotal, int diskon){
+        return hargaTotal - diskon;
+    }
 }
