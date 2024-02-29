@@ -11,6 +11,7 @@ public class PersegiPanjangDemo29 {
 
         for (int i = 0; i < jmlPersegiPanjang; i++) {
             System.out.println("Persegi panjang ke - " + (i + 1));
+            sc29.nextLine();
             System.out.print("Masukkan panjang : ");
             int panjang = sc29.nextInt();
             System.out.print("Masukkan lebar : ");
