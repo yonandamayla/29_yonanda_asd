@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Sum29 {
     public int elemen;
     public double keuntungan[];
@@ -13,7 +15,9 @@ public class Sum29 {
         for (int i = 0; i < elemen; i++) {
             total = total + arr[i];
         }
-        return total;
+        // Memformat hasil dengan dua angka di belakang koma
+        DecimalFormat df = new DecimalFormat("#.##");
+        return Double.parseDouble(df.format(total));
     }
 
     double totalDC(double arr[], int l, int r) {
@@ -23,9 +27,11 @@ public class Sum29 {
             int mid = (l + r) / 2;
             double lsum = totalDC(arr, l, mid - 1);
             double rsum = totalDC(arr, mid + 1, r);
-            return lsum + rsum + arr[mid];
+            double result = lsum + rsum + arr[mid];
+            // Memformat hasil dengan dua angka di belakang koma
+            DecimalFormat df = new DecimalFormat("#.##");
+            return Double.parseDouble(df.format(result));
         }
         return 0;
     }
 }
-
