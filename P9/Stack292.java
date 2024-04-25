@@ -59,12 +59,27 @@ public class Stack292 {
         System.out.println(" ");
     }
 
-    public void celar() {
+    public void clear() {
         if (!isEmpty()) {
             for (int i = top; i >= 0; i--) {
                 top--;
             }
             System.out.println("Stack sudah dikosongkan");
+        } else {
+            System.out.println("Stack masih kosong");
+        }
+    }
+
+    public void getMax() {
+        if (!isEmpty()) {
+            Pakaian29 maxPakaian29 = data[0];
+            for (int i = 1; i <= top; i++) {
+                if (data[i].harga > maxPakaian29.harga) {
+                    maxPakaian29 = data[i];
+                }
+                System.out.println(data[i].jenis + " " + data[i].warna + " " + data[i].merk + " " + data[i].ukuran + " "
+                        + data[i].harga);
+            }
         } else {
             System.out.println("Stack masih kosong");
         }

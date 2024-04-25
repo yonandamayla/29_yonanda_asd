@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class StackMain29 {
     public static void main(String[] args) {
         Scanner sc29 = new Scanner(System.in);
-        Stack292 stk = new Stack292(5); 
+        Stack292 stk = new Stack292(5);
 
         char pilih;
         do {
@@ -12,11 +12,12 @@ public class StackMain29 {
             System.out.println("2. Pop (Hapus data pakaian teratas)");
             System.out.println("3. Peek (Lihat data pakaian teratas)");
             System.out.println("4. Print (Cetak semua data pakaian)");
-            System.out.println("5. Keluar");
+            System.out.println("5. Tampilkan harga tertinggi ");
+            System.out.println("6. Keluar");
 
             System.out.print("Pilih operasi (1-5): ");
             int choice = sc29.nextInt();
-            sc29.nextLine(); 
+            sc29.nextLine();
 
             switch (choice) {
                 case 1:
@@ -30,7 +31,7 @@ public class StackMain29 {
                     String ukuran = sc29.nextLine();
                     System.out.print("Harga : ");
                     double harga = sc29.nextDouble();
-                    sc29.nextLine(); 
+                    sc29.nextLine();
                     Pakaian29 p = new Pakaian29(jenis, warna, merk, ukuran, harga);
                     stk.push(p);
                     System.out.println("Data ditambahkan ke dalam stack.");
@@ -46,6 +47,9 @@ public class StackMain29 {
                     stk.print();
                     break;
                 case 5:
+                    stk.getMax();
+                    break;
+                case 6:
                     System.out.println("Keluar dari program.");
                     System.exit(0);
                     break;
@@ -58,7 +62,7 @@ public class StackMain29 {
 
             System.out.print("Apakah anda ingin melanjutkan (y/n)? ");
             pilih = sc29.next().charAt(0);
-            sc29.nextLine(); 
+            sc29.nextLine();
         } while (pilih == 'y' || pilih == 'Y');
 
         sc29.close();
